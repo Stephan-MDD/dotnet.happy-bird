@@ -1,0 +1,14 @@
+<div class="pipe" style="@sharedPipeCss @topPipeCss"></div>
+<div class="pipe" style="@sharedPipeCss @bottomPipeCss"></div>
+
+@code {
+    [Parameter] public PipeModel Model { get; set; }
+
+    string sharedPipeCss => $@"
+height: {Model.Height}px;
+width: {Model.Width}px;
+left: {Model.DistanceFromLeft}px;
+";
+    string topPipeCss => $"bottom: {Model.DistanceFromBottom + Model.Height + Model.Gap}px;";
+    string bottomPipeCss => $"bottom: {Model.DistanceFromBottom}px;";
+}

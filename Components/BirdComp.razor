@@ -1,0 +1,12 @@
+<img src="/assets/bird.png" alt="bird" id="bird" style="@birdCss" />
+
+@code {
+    [Parameter] public BirdModel Model { get; set; }
+
+    string birdCss => $@"
+bottom: {Model.DistanceFromGround}px;
+width: {Model.Width}px;
+height: {Model.Height}px;
+transform: translateX(-50%) rotate({/*Model.Angle*/ 0}deg);
+";
+}

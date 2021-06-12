@@ -1,0 +1,81 @@
+<div id="scene" style="@sceneCss" autofocus tabindex="0" @onkeyup="HandleKeyUp">
+    <div id="sky">
+        <BirdComp Model="gameManager.Bird" />
+    </div>
+    
+    @foreach (var pipe in gameManager.Pipes)
+    {
+        <PipeComp Model="pipe" />
+    }
+    
+    <div id="ground" style="@groundCss">
+    </div>
+
+    <div id="topbar">
+        <div id="points">
+            <h3>Points @points</h3>
+            <h5 id="highscore">Highscore @highscore</h5>
+        </div>
+        <span @onclick="OpenControls">=</span>
+    </div>
+
+    <div id="welcome-text" style="@welcomeCss">
+        <span>Click to interact</span>
+        <h1>Welcome</h1>
+        <h2>Press Spacebar<br/>to play!</h2>
+    </div>
+
+     <div id="gameOver-text" style="@gamOverCss">
+        <h1>Game Over</h1>
+        <h2>Press Spacebar<br/>to start!</h2>
+    </div>
+
+    @* <div id="ui-controls">
+        <h2>Controls</h2>
+
+        <label>Speed</label>
+        <input type="slider" min="0"/>
+    </div> *@
+
+    
+</div>
+
+@code {
+    GameManager gameManager;
+
+    string sceneCss => $@"
+height: {gameManager.SceneHeight}px;
+width: {gameManager.SceneWidth}px;
+";
+
+    string gamOverCss => $"opacity: {gameManager.UIControls.GameOverTextOpacity};font-size: {gameManager.UIControls.GameOverTextSize}rem;";
+    string groundCss => $"height: {gameManager.GroundHeight}px;";
+
+    string welcomeCss => $"display: {GetWelcomeStyle()};";
+    int points => (int) gameManager.Points;
+    int highscore => (int) gameManager.HighScore;
+    protected override void OnInitialized()
+    {
+        gameManager = new GameManager();
+        gameManager.MainLoopCompleted += (o, e) => StateHasChanged();
+    }
+
+    void HandleKeyUp(KeyboardEventArgs e)
+    {
+        if (e.Key == " ") {
+            if (!gameManager.IsRunning) {
+                gameManager.StartGame();
+            } else {
+                gameManager.Jump();
+            }
+        }
+    }
+
+    void OpenControls() {
+        Console.WriteLine("Open Controls");
+    }
+
+    string GetWelcomeStyle() {
+        return gameManager.DisplayWelcomeText ? "grid": "none";
+    }
+}
