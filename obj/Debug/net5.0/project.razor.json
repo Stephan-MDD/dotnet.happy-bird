@@ -104,39 +104,6 @@
         }
       },
       {
-        "HashCode": -38514712,
-        "Kind": "Components.Component",
-        "Name": "dotnet.flappy_bird.Pages.Index",
-        "AssemblyName": "dotnet.flappy-bird",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "dotnet.flappy_bird.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 1832900296,
-        "Kind": "Components.Component",
-        "Name": "dotnet.flappy_bird.Pages.Index",
-        "AssemblyName": "dotnet.flappy-bird",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "dotnet.flappy_bird.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "dotnet.flappy_bird.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1243624484,
         "Kind": "Components.Component",
         "Name": "dotnet.flappy_bird.App",
@@ -276,6 +243,199 @@
         }
       },
       {
+        "HashCode": -1591632478,
+        "Kind": "Components.Component",
+        "Name": "dotnet.flappy_bird.Components.TextContainers.GameOver",
+        "AssemblyName": "dotnet.flappy-bird",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "GameOver"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "gameOverCss",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "gameOverCss"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "dotnet.flappy_bird.Components.TextContainers.GameOver"
+        }
+      },
+      {
+        "HashCode": 1689051645,
+        "Kind": "Components.Component",
+        "Name": "dotnet.flappy_bird.Components.TextContainers.GameOver",
+        "AssemblyName": "dotnet.flappy-bird",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "dotnet.flappy_bird.Components.TextContainers.GameOver"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "gameOverCss",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "gameOverCss"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "dotnet.flappy_bird.Components.TextContainers.GameOver",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1078895827,
+        "Kind": "Components.Component",
+        "Name": "dotnet.flappy_bird.Components.TextContainers.TopBar",
+        "AssemblyName": "dotnet.flappy-bird",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "TopBar"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "points",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "points"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "highscore",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "highscore"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OpenControls",
+            "TypeName": "System.Action",
+            "Metadata": {
+              "Common.PropertyName": "OpenControls",
+              "Components.DelegateSignature": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "dotnet.flappy_bird.Components.TextContainers.TopBar"
+        }
+      },
+      {
+        "HashCode": 1682986993,
+        "Kind": "Components.Component",
+        "Name": "dotnet.flappy_bird.Components.TextContainers.TopBar",
+        "AssemblyName": "dotnet.flappy-bird",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "dotnet.flappy_bird.Components.TextContainers.TopBar"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "points",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "points"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "highscore",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "highscore"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OpenControls",
+            "TypeName": "System.Action",
+            "Metadata": {
+              "Common.PropertyName": "OpenControls",
+              "Components.DelegateSignature": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "dotnet.flappy_bird.Components.TextContainers.TopBar",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1453422017,
+        "Kind": "Components.Component",
+        "Name": "dotnet.flappy_bird.Components.TextContainers.Welcome",
+        "AssemblyName": "dotnet.flappy-bird",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Welcome"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "welcomeCss",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "welcomeCss"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "dotnet.flappy_bird.Components.TextContainers.Welcome"
+        }
+      },
+      {
+        "HashCode": -441260934,
+        "Kind": "Components.Component",
+        "Name": "dotnet.flappy_bird.Components.TextContainers.Welcome",
+        "AssemblyName": "dotnet.flappy-bird",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "dotnet.flappy_bird.Components.TextContainers.Welcome"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "welcomeCss",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "welcomeCss"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "dotnet.flappy_bird.Components.TextContainers.Welcome",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -572874177,
         "Kind": "Components.Component",
         "Name": "dotnet.flappy_bird.Components.GameContainer",
@@ -305,6 +465,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "dotnet.flappy_bird.Components.GameContainer",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -38514712,
+        "Kind": "Components.Component",
+        "Name": "dotnet.flappy_bird.Pages.Index",
+        "AssemblyName": "dotnet.flappy-bird",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "dotnet.flappy_bird.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 1832900296,
+        "Kind": "Components.Component",
+        "Name": "dotnet.flappy_bird.Pages.Index",
+        "AssemblyName": "dotnet.flappy-bird",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "dotnet.flappy_bird.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "dotnet.flappy_bird.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -12996,6 +13189,16 @@
   "RootNamespace": "dotnet.flappy-bird",
   "Documents": [
     {
+      "FilePath": "/Users/stephan/developer/dotnet.flappy-bird/Components/TextContainers/Welcome.razor",
+      "TargetPath": "Components\\TextContainers\\Welcome.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/stephan/developer/dotnet.flappy-bird/Components/TextContainers/GameOver.razor",
+      "TargetPath": "Components\\TextContainers\\GameOver.razor",
+      "FileKind": "component"
+    },
+    {
       "FilePath": "/Users/stephan/developer/dotnet.flappy-bird/Components/PipeComp.razor",
       "TargetPath": "Components\\PipeComp.razor",
       "FileKind": "component"
@@ -13008,6 +13211,11 @@
     {
       "FilePath": "/Users/stephan/developer/dotnet.flappy-bird/Components/GameContainer.razor",
       "TargetPath": "Components\\GameContainer.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/stephan/developer/dotnet.flappy-bird/Components/TextContainers/TopBar.razor",
+      "TargetPath": "Components\\TextContainers\\TopBar.razor",
       "FileKind": "component"
     },
     {

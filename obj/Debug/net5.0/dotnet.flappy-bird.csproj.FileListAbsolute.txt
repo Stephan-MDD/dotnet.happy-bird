@@ -619,9 +619,15 @@
 /Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/dotnet.flappy-bird.dll
 /Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/ref/dotnet.flappy-bird.dll
 /Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/dotnet.flappy-bird.pdb
-/Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/RazorDeclaration/Components/GameContainer.razor.g.cs
-/Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/Razor/Components/GameContainer.razor.g.cs
 /Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/RazorDeclaration/Components/BirdComp.razor.g.cs
 /Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/Razor/Components/BirdComp.razor.g.cs
 /Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/RazorDeclaration/Components/PipeComp.razor.g.cs
 /Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/Razor/Components/PipeComp.razor.g.cs
+/Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/RazorDeclaration/Components/GameContainer.razor.g.cs
+/Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/RazorDeclaration/Components/TextContainers/GameOver.razor.g.cs
+/Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/Razor/Components/GameContainer.razor.g.cs
+/Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/Razor/Components/TextContainers/GameOver.razor.g.cs
+/Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/RazorDeclaration/Components/TextContainers/Welcome.razor.g.cs
+/Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/Razor/Components/TextContainers/Welcome.razor.g.cs
+/Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/RazorDeclaration/Components/TextContainers/TopBar.razor.g.cs
+/Users/stephan/developer/dotnet.flappy-bird/obj/Debug/net5.0/Razor/Components/TextContainers/TopBar.razor.g.cs

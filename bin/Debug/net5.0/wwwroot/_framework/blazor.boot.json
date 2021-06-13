@@ -195,11 +195,11 @@
       "mscorlib.dll": "sha256-Fi+LybwHL\/VGD\/09OxxtYlT6exn9xVU+LdojZ9juR2c=",
       "netstandard.dll": "sha256-P8xX0ad1hKyWWbBxiXl3cYokFlDiuXwp3pqoYatH0kk=",
       "System.Private.CoreLib.dll": "sha256-2km83sNUTrumGJYdDzsN8RnJqv00vKWLCCh0UGajTB4=",
-      "dotnet.flappy-bird.dll": "sha256-VQibo+9IgDzQMudJJ6D6VV0cIdH9msxFilBprcvakWI="
+      "dotnet.flappy-bird.dll": "sha256-hCHVhbGWSJCQK3Y1p++ddiOvkFf3GrfqWqGCOzQkuQA="
     },
     "lazyAssembly": null,
     "pdb": {
-      "dotnet.flappy-bird.pdb": "sha256-5aOOolv9\/c0gClnqwMsyQKRt0kFN8zCNUwoZEOvrq08="
+      "dotnet.flappy-bird.pdb": "sha256-LWo34XfQ5i2Izi6gtsL4mciyZLmtSuvnccPi0KqkEbI="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ibxaSjW7s3aLVssChknhzCpgMTHGu4D48Q9OLP3dfe8=",

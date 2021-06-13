@@ -1,0 +1,18 @@
+<div id="topbar">
+    <div id="points">
+        <h3>Points @points</h3>
+        <h5 id="highscore">Highscore @highscore</h5>
+    </div>
+    <span @onclick="HandleOnClick">=</span>
+</div>
+
+@code {
+    [Parameter] public int points { get; set; }
+    [Parameter] public int highscore { get; set; }
+    [Parameter] public Action OpenControls { get; set; }
+
+    private void HandleOnClick()
+    {
+        OpenControls?.Invoke();
+    }
+}

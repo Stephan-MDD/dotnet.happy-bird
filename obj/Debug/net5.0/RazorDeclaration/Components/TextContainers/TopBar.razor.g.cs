@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace dotnet.flappy_bird.Components
+namespace dotnet.flappy_bird.Components.TextContainers
 {
     #line hidden
     using System;
@@ -96,14 +96,7 @@ using dotnet.flappy_bird.Models;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 1 "/Users/stephan/developer/dotnet.flappy-bird/Components/GameContainer.razor"
-using dotnet.flappy_bird.Components.TextContainers;
-
-#line default
-#line hidden
-#nullable disable
-    public partial class GameContainer : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class TopBar : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -111,54 +104,20 @@ using dotnet.flappy_bird.Components.TextContainers;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 31 "/Users/stephan/developer/dotnet.flappy-bird/Components/GameContainer.razor"
+#line 9 "/Users/stephan/developer/dotnet.flappy-bird/Components/TextContainers/TopBar.razor"
        
-    GameManager gameManager;
+    [Parameter] public int points { get; set; }
+    [Parameter] public int highscore { get; set; }
+    [Parameter] public Action OpenControls { get; set; }
 
-    string sceneCss => $@"
-height: {gameManager.SceneHeight}px;
-width: {gameManager.SceneWidth}px;
-";
-
-    string gameOverCss => $"opacity: {gameManager.UIControls.GameOverTextOpacity};font-size: {gameManager.UIControls.GameOverTextSize}rem;";
-    string groundCss => $"height: {gameManager.GroundHeight}px;";
-
-    string welcomeCss => $"display: {GetWelcomeStyle()};";
-    int points => (int) gameManager.Points;
-    int highscore => (int) gameManager.HighScore;
-    protected override void OnInitialized()
+    private void HandleOnClick()
     {
-        gameManager = new GameManager();
-        gameManager.MainLoopCompleted += (o, e) => StateHasChanged();
-    }
-
-    protected override void OnAfterRender(bool firstRender) {
-        if (firstRender) JS.InvokeAsync<string>("focus", "scene");
-    }
-
-    protected void HandleKeyUp(KeyboardEventArgs e)
-    {
-        if (e.Key == " ") {
-            if (!gameManager.IsRunning) {
-                gameManager.StartGame();
-            } else {
-                gameManager.Jump();
-            }
-        }
-    }
-
-    protected void OpenControls() {
-        Console.WriteLine("Open Controls");
-    }
-
-    string GetWelcomeStyle() {
-        return gameManager.DisplayWelcomeText ? "grid": "none";
+        OpenControls?.Invoke();
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IJSRuntime JS { get; set; }
     }
 }
 #pragma warning restore 1591

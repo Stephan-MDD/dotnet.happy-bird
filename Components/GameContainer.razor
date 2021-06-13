@@ -1,4 +1,7 @@
-<div id="scene" style="@sceneCss" autofocus tabindex="0" @onkeyup="HandleKeyUp">
+@using dotnet.flappy_bird.Components.TextContainers
+@inject IJSRuntime JS
+
+<div id="scene" style="@sceneCss" tabindex="0" @onkeyup="HandleKeyUp">
     <div id="sky">
         <BirdComp Model="gameManager.Bird" />
     </div>
@@ -11,24 +14,9 @@
     <div id="ground" style="@groundCss">
     </div>
 
-    <div id="topbar">
-        <div id="points">
-            <h3>Points @points</h3>
-            <h5 id="highscore">Highscore @highscore</h5>
-        </div>
-        <span @onclick="OpenControls">=</span>
-    </div>
-
-    <div id="welcome-text" style="@welcomeCss">
-        <span>Click to interact</span>
-        <h1>Welcome</h1>
-        <h2>Press Spacebar<br/>to play!</h2>
-    </div>
-
-     <div id="gameOver-text" style="@gamOverCss">
-        <h1>Game Over</h1>
-        <h2>Press Spacebar<br/>to start!</h2>
-    </div>
+    <TopBar points="@points" highscore="@highscore" OpenControls="OpenControls"/>
+    <Welcome welcomeCss="@welcomeCss"/>
+    <GameOver gameOverCss="@gameOverCss"/>
 
     @* <div id="ui-controls">
         <h2>Controls</h2>
@@ -48,7 +36,7 @@ height: {gameManager.SceneHeight}px;
 width: {gameManager.SceneWidth}px;
 ";
 
-    string gamOverCss => $"opacity: {gameManager.UIControls.GameOverTextOpacity};font-size: {gameManager.UIControls.GameOverTextSize}rem;";
+    string gameOverCss => $"opacity: {gameManager.UIControls.GameOverTextOpacity};font-size: {gameManager.UIControls.GameOverTextSize}rem;";
     string groundCss => $"height: {gameManager.GroundHeight}px;";
 
     string welcomeCss => $"display: {GetWelcomeStyle()};";
@@ -60,7 +48,11 @@ width: {gameManager.SceneWidth}px;
         gameManager.MainLoopCompleted += (o, e) => StateHasChanged();
     }
 
-    void HandleKeyUp(KeyboardEventArgs e)
+    protected override void OnAfterRender(bool firstRender) {
+        if (firstRender) JS.InvokeAsync<string>("focus", "scene");
+    }
+
+    protected void HandleKeyUp(KeyboardEventArgs e)
     {
         if (e.Key == " ") {
             if (!gameManager.IsRunning) {
@@ -71,7 +63,7 @@ width: {gameManager.SceneWidth}px;
         }
     }
 
-    void OpenControls() {
+    protected void OpenControls() {
         Console.WriteLine("Open Controls");
     }
 
